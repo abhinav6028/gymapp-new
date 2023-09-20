@@ -49,9 +49,9 @@ export default function MobileBanner() {
                     src="Assets/Home/gimImage2.png"
                     sx={{
                         bgcolor: '', justifyContent: 'center', alignItems: 'center',
-                        mt: -4,
+                        // mt: -4,
                         height: { xs: 340, sm: 580 },
-                        mt: 'auto'
+                        mt: { xs: 'auto', sm: 'auto', md: -4, lg: -4 }
                     }}
 
                 />
