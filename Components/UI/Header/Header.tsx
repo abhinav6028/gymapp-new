@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Box } from '@mui/material'
 import Button from '../Button/Button';
 import { H5 } from '../Typography/Typography';
+import { BG_COLOUR } from '@/utils/colours';
 
 
 export default function Header() {
@@ -23,7 +24,7 @@ export default function Header() {
 
     return (
         <Grid container sx={{
-            justifyContent: 'end', py: 1.5, alignItems: 'center',
+            justifyContent: 'end', py: 1.5, alignItems: 'center',bgcolor:BG_COLOUR,
             // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
             zIndex: 1000, position: 'fixed'
         }}>

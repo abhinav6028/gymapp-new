@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material'
-import { H5,H4 } from '@/Components/UI/Typography/Typography';
+import { H5, H4 } from '@/Components/UI/Typography/Typography';
 import { PRIMARY_COLOUR } from '@/utils/colours';
 import Button from '@/Components/UI/Button/Button';
 
@@ -39,7 +39,7 @@ export default function VideoSection() {
 
                 <Grid container
                     sx={{
-                        display: { xs: 'none', sm: 'none' }
+                        display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }
                     }}
                 >
 
@@ -47,7 +47,8 @@ export default function VideoSection() {
 
                         height: 90,
                         width: '100%',
-                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '30%', transform: 'translateY(-50%)',
+                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '30%',
+                        // transform: 'translateY(-50%)',
                         transform: ' rotate(-5deg)',
                     }} />
 
@@ -55,8 +56,9 @@ export default function VideoSection() {
 
                         height: 5,
                         width: '100%',
-                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '55%', transform: 'translateY(-50%)',
-                        transform: ' rotate(-5deg)',
+                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '55%',
+                        // transform: 'translateY(-50%)',
+                         transform: ' rotate(-5deg)',
                     }} />
 
                 </Grid>
@@ -79,8 +81,8 @@ export default function VideoSection() {
 
                                 <Box
                                     sx={{
-                                        width: {xs: 270, sm: 230, md: 270, lg: 300 },
-                                        height: {xs: 340, sm: 320, md: 340, lg: 370 },
+                                        width: { xs: 270, sm: 230, md: 270, lg: 300 },
+                                        height: { xs: 340, sm: 320, md: 340, lg: 370 },
                                         borderRadius: 5,
                                         backgroundSize: 'cover', opacity: 1.8,
                                         backgroundImage: `url(${data.imgUrl})`,
