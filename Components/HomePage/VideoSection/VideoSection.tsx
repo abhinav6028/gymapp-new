@@ -58,7 +58,7 @@ export default function VideoSection() {
                         width: '100%',
                         position: 'absolute', left: 0, right: 0, margin: 'auto', top: '55%',
                         // transform: 'translateY(-50%)',
-                         transform: ' rotate(-5deg)',
+                        transform: ' rotate(-5deg)',
                     }} />
 
                 </Grid>
@@ -101,7 +101,7 @@ export default function VideoSection() {
                                         alignItems: 'flex-start', position: "relative"
                                     }}>
 
-                                        <H5 color="#ffff" mt={1.5} mr={18} fontWeight='bold' width='100%' color="white"  >{data.heading}</H5>
+                                        <H5 mt={1.5} mr={18} fontWeight='bold' width='100%' color="white"  >{data.heading}</H5>
 
                                         <Box
                                             component='img'
