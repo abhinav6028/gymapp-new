@@ -1,15 +1,23 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import { Grid } from '@mui/material'
 import HomePage from '@/Components/HomePage/HomePage'
+import Header from '@/Components/UI/Header/Header'
+import { BG_COLOUR } from '@/utils/colours'
+import { Grid } from '@mui/material'
+import React from 'react'
 
+const page = () => {
 
-export default function Home() {
   return (
-    <Grid container>
+
+    <Grid  bgcolor={BG_COLOUR}>
+
+      <Header />
+
 
       <HomePage />
 
     </Grid>
+
   )
 }
+
+export default page

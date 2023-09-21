@@ -1,9 +1,8 @@
-import { Grid } from '@mui/material'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Header from '@/Components/UI/Header/Header'
-import { BG_COLOUR } from '@/utils/colours'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,11 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Grid container bgcolor={BG_COLOUR} >
-
-      <Header />
-
-      {children}
-    </Grid>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
   )
 }
