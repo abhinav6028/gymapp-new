@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { Typography, Grid, Box } from "@mui/material";
 import { H1, H2, H5, } from '@/Components/UI/Typography/Typography';
