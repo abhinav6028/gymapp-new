@@ -68,7 +68,6 @@ export default function ContactUs() {
                         <Grid container sx={{
                             display: 'flex',
                             mt: { xs: 1, lg: 4 },
-                            bgcolor: 'red',
                             justifyContent: { xs: 'center', sm: 'center', md: 'start', lg: 'start' }
                         }}>
                             <H5 width='30%' textAlign='start' fontWeight='bold'>Email</H5>
@@ -91,7 +90,7 @@ export default function ContactUs() {
 
                         <Grid container xs={10} sm={9} md={10} lg={9} sx={{
                             justifyContent: 'center',
-                            mt: { xs: 1 }
+                            mt: { xs: 1 },
                         }}>
 
 
@@ -103,7 +102,8 @@ export default function ContactUs() {
                                         // width: { xs: '80%', sm: '65%', lg: '100%' },
                                         width: '100%',
                                         height: { xs: 35, sm: 60, lg: 50 },
-                                        my: { xs: 1.3, sm: 2, md: 2 }
+                                        my: { xs: 1.3, sm: 2, md: 2 },
+                                        bgcolor: 'red'
                                     }}>
 
                                         <input type="text"
