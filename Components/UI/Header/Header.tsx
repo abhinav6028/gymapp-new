@@ -21,6 +21,10 @@ export default function Header() {
         {
             name: 'Testimonials',
             path: '/testimonials'
+        },
+        {
+            name: 'Contact Us',
+            path: '/testimonials'
         }
     ]
 
@@ -34,14 +38,14 @@ export default function Header() {
             {
                 headrDaata.map((data, index) =>
 
-                    <Box sx={{ mr: { xs: 1.5, md: 2.5 } }}>
+                    <Box sx={{ mr: { xs: 1.5, md: 2.8 } }}>
                         <H5 cursor='pointer'>{data.name}</H5>
                     </Box>
 
                 )
             }
 
-            <Button mr={5}>Contact Us</Button>
+            <Button mr={5}>Sign Up</Button>
 
         </Grid>
     )

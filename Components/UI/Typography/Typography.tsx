@@ -38,13 +38,14 @@ export const H2 = (props: any) => {
 
 export const H4 = (props: any) => {
 
-    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width } = props
+    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, textAlign } = props
 
     return (
         <Typography sx={{
             fontSize: { xs: 20, sm: 27, md: 30, lg: 33 },
             fontWeight: fontWeight, cursor: cursor,
-            width: width ? width : '100%', textAlign: 'center'
+            width: width ? width : '100%',
+            textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
         }}>{props.children}</Typography>
     )
 }
@@ -56,14 +57,14 @@ export const H4 = (props: any) => {
 
 export const H5 = (props: any) => {
 
-    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, color,textAlign } = props
+    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, color, textAlign } = props
 
     return (
         <Typography sx={{
             fontSize: { xs: 14, sm: 18, md: 18 },
             fontWeight: fontWeight, cursor: cursor,
             width: width ? width : '100%',
-            textAlign: textAlign ? textAlign : 'center',
+            textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
             my: 0.5, color: color, bgcolor: ''
         }}>{props.children}</Typography>
     )

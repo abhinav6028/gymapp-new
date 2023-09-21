@@ -32,7 +32,7 @@ export default function Banner() {
     return (
         <Grid container
             sx={{
-                mt: { md: 10, lg: 10 },
+                mt: { xs: 5, md: 10, lg: 10 },
                 display: { xs: 'none', sm: 'none', md: 'flex' }
             }}
         >
@@ -46,7 +46,7 @@ export default function Banner() {
                 }}
             />
 
-            <Grid md={8} lg={6.5} sx={{
+            <Grid xs={11} md={8} lg={6.5} sx={{
                 justifyContent: 'end', alignItems: 'end', ml: -8
             }}>
 
@@ -57,11 +57,22 @@ export default function Banner() {
                     component='img'
                     src='Assets/Icons/Dumbbell (1).png'
                     sx={{
-                        bgcolor: '', mt: { md: '-100', lg: '-120' },
+                        position: 'absolute',
+                        right: { md: 60, lg: 150 },
+                        bottom: 230
+                    }}
+                />
+
+                {/* <Box
+                    component='img'
+                    src='Assets/Icons/Dumbbell (1).png'
+                    sx={{
+                        bgcolor: '',
+                        mt: { md: '-100', lg: '-50' },
                         position: 'absolute',
                         right: { md: 60, lg: 150 },
                     }}
-                />
+                /> */}
 
                 <Grid container sx={{
                     ml: { md: 6, lg: 20 },
@@ -114,7 +125,7 @@ export default function Banner() {
 
             </Grid>
 
-            
+
 
 
 
