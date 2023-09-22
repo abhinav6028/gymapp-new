@@ -5,9 +5,12 @@ import { Grid, Box } from '@mui/material'
 import Button from '../Button/Button';
 import { H5 } from '../Typography/Typography';
 import { BG_COLOUR } from '@/utils/colours';
+import { useRouter } from 'next/navigation';
 
 
 export default function Header() {
+
+    const router = useRouter()
 
     const headrDaata = [
         {
@@ -41,15 +44,13 @@ export default function Header() {
             zIndex: 1000, position: 'fixed'
         }}>
 
-            <Box
-                onClick={() => alert('//////////////')}
-            >Hiii</Box>
+           
 
             {
                 headrDaata.map((data, index) =>
 
                     <Box
-
+                        onClick={() => router.push(data.path)}
                         sx={{ mr: { xs: 1.5, md: 2.8 } }}>
 
                         <H5 cursor='pointer'>{data.name}</H5>
