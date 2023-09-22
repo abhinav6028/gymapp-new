@@ -28,6 +28,11 @@ export default function Header() {
         }
     ]
 
+    // const handleClick = (e) => {
+    //     console.log('Free pizza!');
+
+    // }
+
     return (
         <Grid container sx={{
             justifyContent: 'end', py: 1.5, alignItems: 'center',
@@ -36,11 +41,19 @@ export default function Header() {
             zIndex: 1000, position: 'fixed'
         }}>
 
+            <Box
+                onClick={() => alert('//////////////')}
+            >Hiii</Box>
+
             {
                 headrDaata.map((data, index) =>
 
-                    <Box sx={{ mr: { xs: 1.5, md: 2.8 } }}>
+                    <Box
+
+                        sx={{ mr: { xs: 1.5, md: 2.8 } }}>
+
                         <H5 cursor='pointer'>{data.name}</H5>
+
                     </Box>
 
                 )
