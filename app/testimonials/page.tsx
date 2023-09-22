@@ -2,6 +2,7 @@
 
 import Dumbel from '@/Components/UI/Dumbel/Dumbel'
 import Header from '@/Components/UI/Header/Header'
+import MobileHeader from '@/Components/UI/Header/MobileHeader'
 import { H4 } from '@/Components/UI/Typography/Typography'
 import { BG_COLOUR, PRIMARY_COLOUR, SECONDARY_COLOUR } from '@/utils/colours'
 import { Avatar, Box, Grid, Typography } from '@mui/material'
@@ -15,6 +16,8 @@ export default function page() {
         }}>
 
             <Header />
+
+            <MobileHeader />
 
             <Grid container sx={{
                 mt: 10,
@@ -34,10 +37,10 @@ export default function page() {
 
                 <Grid container lg={11} sx={{
                     bgcolor: '', alignItems: 'center',
-                    mt:4
+                    mt: 4
                 }} >
 
-                   
+
 
 
                     <Box

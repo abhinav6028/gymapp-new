@@ -8,6 +8,7 @@ import { BG_COLOUR } from '@/utils/colours'
 import { H4, H5 } from '@/Components/UI/Typography/Typography'
 import Button from '@/Components/UI/Button/Button'
 import ImageComponent from '@/Components/UI/ImageComponent/ImageComponent'
+import MobileHeader from '@/Components/UI/Header/MobileHeader'
 
 export default function page() {
 
@@ -30,6 +31,8 @@ export default function page() {
         <Grid container sx={{ bgcolor: BG_COLOUR, justifyContent: 'center' }}>
 
             <Header />
+
+            <MobileHeader />
 
             <Grid lg={11} container sx={{
                 justifyContent: 'center', alignItems: 'center', bgcolor: '',

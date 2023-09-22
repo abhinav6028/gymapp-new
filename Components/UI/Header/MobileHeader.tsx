@@ -64,7 +64,7 @@ export default function MobileHeader() {
 
         </Box>
 
-        {/* <Box
+        <Box
 
           onClick={() => router.push('/')}
           style={{ cursor: 'pointer' }}
@@ -80,7 +80,7 @@ export default function MobileHeader() {
           }}
           alt="The house from the offer."
           src="/assets/logo/logo.png"
-        /> */}
+        />
 
       </Box>
 
@@ -97,7 +97,7 @@ export default function MobileHeader() {
 
               <Box onClick={MenuBar} sx={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
 
-                <Typography sx={{ color: "black", fontWeight: '550', cursor: 'pointer' }} onClick={() => router.push(data.path)}>{data.title}</Typography>
+                <Typography sx={{ color: "black", fontWeight: '550', cursor: 'pointer' }} onClick={() => router.push(data.path)}>{data.name}</Typography>
 
               </Box>
 
