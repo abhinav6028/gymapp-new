@@ -31,20 +31,13 @@ export default function Header() {
         }
     ]
 
-    // const handleClick = (e) => {
-    //     console.log('Free pizza!');
-
-    // }
-
     return (
         <Grid container sx={{
             justifyContent: 'end', py: 1.5, alignItems: 'center',
-            bgcolor:BG_COLOUR,
-            // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
-            zIndex: 1000, position: 'fixed'
+            bgcolor: BG_COLOUR,
+            zIndex: 1000, position: 'fixed',
+            display: {xs:'none',sm:'none',md:'flex'}
         }}>
-
-           
 
             {
                 headrDaata.map((data, index) =>
