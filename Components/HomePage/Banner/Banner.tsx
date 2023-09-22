@@ -5,6 +5,7 @@ import { Box, Grid } from '@mui/material'
 import { SECONDARY_COLOUR, PRIMARY_COLOUR } from '@/utils/colours';
 import Button from '@/Components/UI/Button/Button';
 import { H1, H2, H5 } from '@/Components/UI/Typography/Typography';
+import Dumbel from '@/Components/UI/Dumbel/Dumbel';
 
 
 export default function Banner() {
@@ -53,26 +54,20 @@ export default function Banner() {
                 <H1 ml='auto' fontWeight="bold" color={PRIMARY_COLOUR}>WORKOUT</H1>
                 <H2 ml='auto' fontWeight="bold" colour='red' mt={-11}>PLANS</H2>
 
-                <Box
-                    component='img'
-                    src='Assets/Icons/Dumbbell (1).png'
-                    sx={{
-                        position: 'absolute',
-                        right: { md: 60, lg: 150 },
-                        bottom: 230
-                    }}
-                />
 
-                {/* <Box
-                    component='img'
-                    src='Assets/Icons/Dumbbell (1).png'
-                    sx={{
-                        bgcolor: '',
-                        mt: { md: '-100', lg: '-50' },
-                        position: 'absolute',
-                        right: { md: 60, lg: 150 },
-                    }}
-                /> */}
+                <Box sx={{
+                    position: 'absolute',
+                    right: { md: 60, lg: 150 },
+                    bottom: 230
+                }}>
+
+
+                    <Dumbel />
+
+
+                </Box>
+
+
 
                 <Grid container sx={{
                     ml: { md: 6, lg: 20 },
@@ -105,8 +100,7 @@ export default function Banner() {
                                             height: { md: 35, lg: 40 },
                                             width: { md: 35, lg: 40 },
                                             py: 0.3
-                                            // mx: { xs: 1, md: 2 },
-                                            // bgcolor:'orange'
+
                                         }}
                                     />
 

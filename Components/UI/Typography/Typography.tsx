@@ -46,6 +46,7 @@ export const H4 = (props: any) => {
             fontWeight: fontWeight, cursor: cursor,
             width: width ? width : '100%',
             textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
+            // bgcolor:'blue'
         }}>{props.children}</Typography>
     )
 }
