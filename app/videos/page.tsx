@@ -1,3 +1,5 @@
+"use client"
+
 import Header from '@/Components/UI/Header/Header'
 import { Box, Grid, InputAdornment, OutlinedInput, TextField } from '@mui/material'
 import React from 'react'
