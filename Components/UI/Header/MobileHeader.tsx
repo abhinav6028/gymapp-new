@@ -6,8 +6,11 @@ import router from 'next/router'
 import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { BG_COLOUR } from '@/utils/colours'
+import Button from '../Button/Button'
 
 export default function MobileHeader() {
+
   const [menu, setMenu] = React.useState(false)
 
   const router = useRouter();
@@ -42,7 +45,7 @@ export default function MobileHeader() {
 
     <Grid container sx={{
       display: { xs: "block", md: "none" },
-      bgcolor: 'red'
+
     }}>
 
       <Box sx={{
@@ -51,12 +54,13 @@ export default function MobileHeader() {
         py: 1,
         position: "fixed",
         zIndex: "110", top: "0", left: "0",
-        bgcolor: "#FEF0E5"
-        // bgcolor: { MAIN_COLOR }
+        // bgcolor: "#FEF0E5"
+        bgcolor: BG_COLOUR
+        // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
       }} >
 
         <Box position="fixed" left="0" sx={{
-          bgcolor: "#FEF0E5"
+          bgcolor: BG_COLOUR
         }}>
 
           {menu ? <CloseIcon sx={{ ml: 2, color: "#513328", fontSize: { xs: '2rem' } }} onClick={() => setMenu(!menu)} /> :
@@ -70,8 +74,8 @@ export default function MobileHeader() {
           style={{ cursor: 'pointer' }}
           component="img"
           sx={{
-            bgcolor: "#FEF0E5",
-            pt: 1,
+            bgcolor: BG_COLOUR,
+            // pt: 1,
             pb: 1,
             height: 50,
             width: 100,
@@ -104,6 +108,10 @@ export default function MobileHeader() {
             </Box>
           )}
 
+
+        <Button onClick={() => router.push('/signup')} ml={1.5} >Sign Up</Button>
+
+        <Button mt={1.5} ml={1.5}>Log In</Button>
       </Box>
 
     </Grid >

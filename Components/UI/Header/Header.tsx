@@ -35,8 +35,9 @@ export default function Header() {
         <Grid container sx={{
             justifyContent: 'end', py: 1.5, alignItems: 'center',
             bgcolor: BG_COLOUR,
+            // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
             zIndex: 1000, position: 'fixed',
-            display: {xs:'none',sm:'none',md:'flex'}
+            display: { xs: 'none', sm: 'none', md: 'flex' }
         }}>
 
             {
@@ -53,7 +54,9 @@ export default function Header() {
                 )
             }
 
-            <Button mr={5}>Sign Up</Button>
+            <Button onClick={() => router.push('/signup')} mr={3}>Sign Up</Button>
+
+            <Button mr={5}>Log In</Button>
 
         </Grid>
     )

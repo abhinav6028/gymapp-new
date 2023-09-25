@@ -46,7 +46,7 @@ export const H4 = (props: any) => {
             fontWeight: fontWeight, cursor: cursor,
             width: width ? width : '100%',
             textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
-            // bgcolor:'blue'
+            bgcolor:'transparent'
         }}>{props.children}</Typography>
     )
 }
@@ -66,7 +66,7 @@ export const H5 = (props: any) => {
             fontWeight: fontWeight, cursor: cursor,
             width: width ? width : '100%',
             textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
-            my: 0.5, color: color, bgcolor: ''
+            my: 0.5, color: color, bgcolor:'transparent'
         }}>{props.children}</Typography>
     )
 }

@@ -10,13 +10,14 @@ export default function OurStory() {
             justifyContent: 'center', alignItems: 'center',
             bgcolor: { xs: SECONDARY_COLOUR, sm: '', md: '', lg: '' },
             my: { xs: 4 }
+
         }}>
 
             <Grid container xs={11.5} sm={11.5} md={11.5} lg={11.5} sx={{
-                justifyContent: 'center', alignItems: 'center', bgcolor: '', my: 2.5
+                justifyContent: 'center', alignItems: 'center', bgcolor: 'transparent', my: 2.5
             }}>
 
-                <Grid container lg={6} sx={{ bgcolor: ' ', justifyContent: 'center', alignItems: 'center', }}>
+                <Grid container lg={6} sx={{ bgcolor: 'transparent', justifyContent: 'center', alignItems: 'center', }}>
                     <ImageComponent />
                 </Grid>
 
@@ -25,15 +26,15 @@ export default function OurStory() {
                     mt: { xs: 1 }
                 }}>
 
-                    <Grid container sx={{ mb: 'auto', justifyContent: 'center' }}>
+                    <Grid container sx={{ mb: 'auto', justifyContent: 'center', bgcolor: 'transparent' }}>
 
-                        <Box sx={{ mb: 1 }}>
+                        <Box sx={{ mb: 1,bgcolor: 'transparent' }}>
                             <H4 fontWeight='bold'>Our Story</H4>
                         </Box>
 
                         <Grid container lg={10} sx={{
                             my: { xs: 1, lg: 1 },
-                            alignItems: 'center', bgcolor: '',
+                            alignItems: 'center', bgcolor: 'transparent'
                         }}>
                             <H5 fontWeight='bold' >
                                 Lorem Ipsum is simply dummy text of the printing and
@@ -47,6 +48,7 @@ export default function OurStory() {
                         </Grid>
 
                     </Grid>
+
                 </Grid>
 
             </Grid>

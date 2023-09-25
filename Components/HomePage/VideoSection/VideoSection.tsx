@@ -28,18 +28,20 @@ export default function VideoSection() {
     return (
         <Grid container sx={{
             justifyContent: 'center', alignItems: 'center',
-            my: { xs: 2, sm: 3, md: 4 }
+            my: { xs: 2, sm: 3, md: 4 },
+            bgcolor: 'transparent'
         }}>
 
             <H4 fontWeight='bold'>Build Your Body With Us</H4>
 
             <H5 >We have 42 days  workout program for every section</H5>
 
-            <Grid container justifyContent="center" bgcolor="" alignItems="center" sx={{ position: 'relative' }}>
+            <Grid container justifyContent="center" bgcolor="" alignItems="center" sx={{ position: 'relative', bgcolor: 'transparent' }}>
 
                 <Grid container
                     sx={{
-                        display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }
+                        display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+                        // bgcolor:'red'
                     }}
                 >
 
@@ -66,7 +68,7 @@ export default function VideoSection() {
 
 
                 <Grid container justifyContent='space-around' lg={10} md={12} zIndex='2' sx={{
-                    mt: 2, bgcolor: ''
+                    mt: 2, bgcolor: 'transparent'
                 }} >
 
                     {
@@ -76,6 +78,7 @@ export default function VideoSection() {
 
                                 xs={12} sm={4} md={4} sx={{
                                     py: { xs: 2, md: 4 },
+                                    bgcolor: 'transparent'
                                     // bgcolor: { xs: 'red', sm: 'blue', md: 'green' }
                                 }}>
 
@@ -101,7 +104,7 @@ export default function VideoSection() {
                                         alignItems: 'flex-start', position: "relative"
                                     }}>
 
-                                        <H5 mt={1.5} mr={18} fontWeight='bold' width='100%' color="white"  >{data.heading}</H5>
+                                        <H5 mt={1.5} mr={18} fontWeight='bold' width='100%' color="white" textAlign='start'  >{data.heading}</H5>
 
                                         <Box
                                             component='img'
@@ -111,7 +114,8 @@ export default function VideoSection() {
                                                 cursor: 'pointer', position: "absolute",
                                                 top: "50%",
                                                 left: " 50%",
-                                                transform: "translate(-50%, -50%)"
+                                                transform: "translate(-50%, -50%)",
+                                                bgcolor:'transparent'
 
                                             }}
                                         />

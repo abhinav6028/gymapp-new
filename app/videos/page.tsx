@@ -34,7 +34,7 @@ export default function page() {
 
             <MobileHeader />
 
-            <Grid lg={11} container sx={{
+            <Grid xs={10} sm={10} lg={11} container sx={{
                 justifyContent: 'center', alignItems: 'center', bgcolor: '',
                 mt: 12,
             }}>
@@ -48,12 +48,13 @@ export default function page() {
                             component='img'
                             src='/Assets/Icons/Search.png'
                             sx={{
-                                width: 35, height: 35,
-                                ml: 2
+                                width: { sm: 25, lg: 35 },
+                                height: { sm: 25, lg: 35 },
+                                ml: { sm: 1, lg: 2 }
                             }}
                         />
 
-                        <Box sx={{ ml: 3 }}>
+                        <Box sx={{ ml: { sm: 1.5, lg: 2 } }}>
                             <H5 ml={2} color='black' fontWeight='550'>Search</H5>
                         </Box>
 
@@ -61,7 +62,7 @@ export default function page() {
                     </InputAdornment>}
                     sx={{
                         width: '100%',
-                        height: 55,
+                        height: { xs: 40, lg: 55 },
                         borderRadius: 3,
                         bgcolor: '#ECD268', border: '#ECD268',
 

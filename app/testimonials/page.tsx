@@ -22,7 +22,8 @@ export default function page() {
             <Grid container sx={{
                 mt: 10,
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                bgcolor: 'transparent'
             }}>
 
                 <Grid container xs={6} lg={3.5} sx={{
@@ -36,7 +37,7 @@ export default function page() {
                 </Grid>
 
                 <Grid container lg={11} sx={{
-                    bgcolor: '', alignItems: 'center',
+                    bgcolor: 'transparent', alignItems: 'center',
                     mt: 4
                 }} >
 
@@ -47,14 +48,16 @@ export default function page() {
                         component='img'
                         src=' Assets/Icons/Dumbbell (1).png'
                         sx={{
-                            width: 80
+                            width: 80,
+                            bgcolor: 'transparent'
                         }}
                     />
 
                     <Box sx={{
                         width: { xs: '40%', lg: '30%', },
                         ml: { xs: 5, lg: 30 },
-                        zIndex: 100
+                        zIndex: 100,
+                        bgcolor: 'transparent'
                     }}>
                         <H4 textAlign='start' fontWeight='bold'>Our Clint Says</H4>
                     </Box>
@@ -62,16 +65,24 @@ export default function page() {
 
                 </Grid>
 
-                <Grid container bgcolor="" sx={{ zIndex: 20, justifyContent: 'center', alignItems: 'center' }}>
+                <Grid container bgcolor="" sx={{ zIndex: 20, justifyContent: 'center', alignItems: 'center', bgcolor: 'transparent' }}>
 
                     {
                         [1, 2, 3, 4, 5, 6, 6].map((data, index) =>
 
                             <Grid container key={index} xs={10} lg={9.5} sx={{ bgcolor: '#ffff', mt: 3 }}>
 
-                                <Grid container sx={{ mt: { xs: 1, lg: 2 } }}>
+                                <Grid container sx={{
+                                    mt: { xs: 1, lg: 2 },
+                                    bgcolor: 'transparent'
 
-                                    <Grid container bgcolor='' lg={2} sx={{ justifyContent: 'center', alignItems: 'center' }} >
+                                }}>
+
+
+                                    <Grid container bgcolor='' lg={2} sx={{
+                                        justifyContent: 'center', alignItems: 'center',
+                                        bgcolor: 'transparent'
+                                    }} >
                                         <Avatar alt="Remy Sharp"
                                             sx={{
                                                 height: { xs: 80, lg: 120 },
@@ -81,14 +92,17 @@ export default function page() {
                                         />
                                     </Grid>
 
+
+
                                     <Grid container bgcolor='' lg={7} sx={{
-                                        alignItems: 'center'
+                                        alignItems: 'center',
+                                        bgcolor: 'transparent'
                                     }}>
 
                                         <Box sx={{
                                             width: '90%',
                                             alignItems: 'center',
-                                            bgcolor: ''
+                                            bgcolor: 'transparent'
                                         }}>
 
                                             <Box
@@ -98,18 +112,21 @@ export default function page() {
                                                     height: { xs: 15, lg: 18 },
                                                     width: { xs: 15, lg: 18 },
                                                     m: 1,
+                                                    bgcolor: 'transparent'
                                                     // ml: 10,
                                                     // zIndex: 2000
                                                 }}
                                             />
 
                                             <Box sx={{
-                                                ml: 3
+                                                ml: 3,
+                                                bgcolor: 'transparent'
                                             }}>
                                                 <H4 fontWeight='bold' textAlign='start' >
 
                                                     <Typography sx={{
-                                                        fontSize: 23
+                                                        fontSize: 23,
+                                                        bgcolor: 'transparent'
                                                     }}>CUSTOMER NAME</Typography>
                                                     {/* CUSTOMER NAME */}
                                                 </H4>
@@ -117,7 +134,8 @@ export default function page() {
                                                 <Typography sx={{
                                                     py: 2,
                                                     fontWeight: 'bold',
-                                                    textAlign: { xs: 'center' }
+                                                    textAlign: { xs: 'center' },
+                                                    bgcolor: 'transparent'
                                                 }}>Lorem Ipsum is simply dummy text of the printing and typesetting
                                                     industry. Lorem Ipsum has been the industry s standard dummy text
                                                     ever since the 1500s, when an unknown printer took a galley of type
@@ -130,7 +148,10 @@ export default function page() {
                                     </Grid>
 
 
-                                    <Grid container bgcolor='' lg={3} sx={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <Grid container bgcolor='' lg={3} sx={{
+                                        justifyContent: 'center', alignItems: 'center',
+                                        bgcolor: 'transparent'
+                                    }}>
 
                                         <Box
                                             component='img'

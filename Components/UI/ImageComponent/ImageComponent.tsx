@@ -5,7 +5,7 @@ export default function ImageComponent() {
     return (
         <Grid container alignItems='center' xs={10} md={12} sx={{
             justifyContent: { xs: 'center', md: 'center', lg: 'center' },
-            bgcolor: ''
+            bgcolor: 'transparent'
         }} >
             <Box
                 component='img'

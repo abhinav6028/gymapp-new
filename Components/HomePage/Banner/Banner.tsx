@@ -99,7 +99,8 @@ export default function Banner() {
                                         sx={{
                                             height: { md: 35, lg: 40 },
                                             width: { md: 35, lg: 40 },
-                                            py: 0.3
+                                            py: 0.3,
+                                            bgcolor:'transparent'
 
                                         }}
                                     />
