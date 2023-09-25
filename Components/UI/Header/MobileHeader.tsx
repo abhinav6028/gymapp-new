@@ -91,15 +91,18 @@ export default function MobileHeader() {
       <Box sx={{
         transition: "0.5s",
         width: "100%", height: "fit-content",
-        position: "fixed", zIndex: "100", left: "0%", top: menu ? "50px" : "-40%", bgcolor: "#FEF0E5"
+        position: "fixed", zIndex: "100", left: "0%", top: menu ? "50px" : "-40%",
+        bgcolor: BG_COLOUR
+        // bgcolor: "red"
+
       }}>
 
         {
           navbarItems.map((data: any, index: any) =>
 
-            <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2, bgcolor: "#FEF0E5" }}>
+            <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2, bgcolor: BG_COLOUR}}>
 
-              <Box onClick={MenuBar} sx={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
+              <Box onClick={MenuBar} sx={{ display: "flex", justifyContent: "center", alignItems: "center", bgcolor: 'red', }}>
 
                 <Typography sx={{ color: "black", fontWeight: '550', cursor: 'pointer' }} onClick={() => router.push(data.path)}>{data.name}</Typography>
 
