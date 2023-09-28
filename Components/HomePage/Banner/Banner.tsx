@@ -6,9 +6,12 @@ import { SECONDARY_COLOUR, PRIMARY_COLOUR } from '@/utils/colours';
 import Button from '@/Components/UI/Button/Button';
 import { H1, H2, H5 } from '@/Components/UI/Typography/Typography';
 import Dumbel from '@/Components/UI/Dumbel/Dumbel';
+import { useRouter } from 'next/navigation';
 
 
 export default function Banner() {
+
+    const router = useRouter()
 
     const items = [
         {
@@ -48,7 +51,8 @@ export default function Banner() {
             />
 
             <Grid xs={11} md={8} lg={6.5} sx={{
-                justifyContent: 'end', alignItems: 'end', ml: -8
+                justifyContent: 'end', alignItems: 'end', ml: -8,
+                bgcolor: 'transparent'
             }}>
 
                 <H1 ml='auto' fontWeight="bold" color={PRIMARY_COLOUR}>WORKOUT</H1>
@@ -58,7 +62,7 @@ export default function Banner() {
                 <Box sx={{
                     position: 'absolute',
                     right: { md: 60, lg: 150 },
-                    bottom: 230
+                    bottom: { md: 400, lg: 250 }
                 }}>
 
 
@@ -100,7 +104,7 @@ export default function Banner() {
                                             height: { md: 35, lg: 40 },
                                             width: { md: 35, lg: 40 },
                                             py: 0.3,
-                                            bgcolor:'transparent'
+                                            bgcolor: 'transparent'
 
                                         }}
                                     />
@@ -114,17 +118,14 @@ export default function Banner() {
                         )
                     }
 
-                    <Button mt='auto'>Register Now</Button>
+                    <Button
+
+                        onClick={() => router.push('/subscription')}
+                        mt='auto'>Subscribe</Button>
 
                 </Grid>
 
             </Grid>
-
-
-
-
-
-
 
         </Grid >
     )

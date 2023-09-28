@@ -100,7 +100,7 @@ export default function MobileHeader() {
         {
           navbarItems.map((data: any, index: any) =>
 
-            <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2, bgcolor: BG_COLOUR}}>
+            <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2, bgcolor: BG_COLOUR }}>
 
               <Box onClick={MenuBar} sx={{ display: "flex", justifyContent: "center", alignItems: "center", bgcolor: 'red', }}>
 

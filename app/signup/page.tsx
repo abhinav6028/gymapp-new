@@ -60,6 +60,7 @@ export default function page() {
                 {
                     check ? <SignUpForm check={check} setCheck={setCheck} /> : <Authentication />
                 }
+                
 
                 <SignUpImage />
 
