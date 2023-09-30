@@ -4,10 +4,120 @@ import React from 'react'
 import { H4 } from '../Typography/Typography';
 import Styles from '../../../Styles/inputfield.module.css'
 import Button from '../Button/Button'
+import CustomeTextField from '../CustomeTextField/CustomeTextField';
+import { useFormik } from 'formik';
+import { log } from 'console';
+import axios from 'axios';
+import { BASE_URL } from '@/utils/urls';
 
 export default function SignUpForm(props: any) {
 
     const { setCheck, check } = props;
+
+    const formik = useFormik({
+
+        initialValues: {
+            firstName: "",
+            lastName: "",
+            username: "",
+            dateOfBirth: "",
+            address: "",
+            place: "",
+            city: "",
+            state: "",
+            gender: "",
+            mobile: "",
+            email: "",
+            password: ""
+
+        },
+
+        onSubmit: (values) => {
+
+            axios.post(`${BASE_URL}/client`,
+                {
+                    firstName: values.firstName,
+                    lastName: values.lastName,
+                    username: values.username,
+                    dateOfBirth: values.dateOfBirth,
+                    address: values.address,
+                    place: values.place,
+                    city: values.city,
+                    state: values.state,
+                    gender: values.gender,
+                    mobile: values.mobile,
+                    email: values.email,
+                    password: values.password,
+                }
+            ).then((res) =>
+
+                console.log("/////////////////", res)
+
+            )
+
+        },
+
+    })
+
+
+    const formItems = [
+        {
+            fieldName: "First Name",
+            id: 'firstName',
+            type: 'text'
+        },
+        {
+            fieldName: "Last Name",
+            id: 'lastName',
+            type: 'text'
+        },
+        {
+            fieldName: "User Name",
+            id: 'username',
+            type: 'text'
+        },
+        {
+            fieldName: "Mobile ",
+            id: 'mobile',
+            type: 'number'
+        },
+        {
+            fieldName: "Watsap number ",
+            id: 'mobile',
+            type: 'number'
+        },
+        {
+            fieldName: "Email",
+            id: 'email',
+            type: 'email'
+        },
+        {
+            fieldName: "Gender",
+            id: 'gender',
+            type: 'text'
+        },
+        {
+            fieldName: "State",
+            id: 'state',
+            type: 'state'
+        },
+        {
+            fieldName: "City",
+            id: 'city',
+            type: 'text'
+        },
+        {
+            fieldName: "Place",
+            id: 'place',
+            type: 'text'
+        },
+        {
+            fieldName: "Password",
+            id: 'password',
+            type: 'text'
+        }
+
+    ]
 
     return (
         <Grid container lg={7} sx={{}}>
@@ -36,102 +146,66 @@ export default function SignUpForm(props: any) {
 
             }}>
 
-                <Grid container xs={10} md={6} lg={7.5} bgcolor='' sx={{
+                <Grid container xs={10} md={10} lg={10} bgcolor='' sx={{
                     alignItems: 'center',
-                    justifyContent: ''
+                    justifyContent: '',
+                    bgcolor: ''
                 }}>
 
                     <H4 textAlign='start' fontWeight='bold'>SIGN UP</H4>
 
+                    <form style={{ width: '100%', background: '' }} onSubmit={formik.handleSubmit} >
 
-                    <Grid container sx={{ mt: { xs: 1.5, lg: 2 } }}>
-
-                        <Typography sx={{
-                            fontWeight: 'bold',
-                            width: '100%'
-                        }}>Full name</Typography>
-
-                        <Box sx={{
-                            width: { xs: '100%', lg: '80%' },
-                            height: { xs: 35, md: 37 }, mt: 0.6,
-                            bgcolor: 'transparent'
-                        }}>
-
-                            <input type="text"
-                                name="email"
-                                // laceholder='EMAIL'
-                                className={Styles.field}
-                            />
-
-                        </Box>
-
-                    </Grid>
+                        <Grid container justifyContent="center">
 
 
+                            {
+                                formItems.map((data: any, index: any) => {
 
-                    <Grid container sx={{ mt: { xs: 1.5, lg: 2 } }}>
+                                    // console.log("//////////////////", data);
 
-                        <Typography sx={{
-                            fontWeight: 'bold',
-                            width: '100%'
-                        }}>Full name</Typography>
 
-                        <Box sx={{
-                            width: { xs: '100%', lg: '80%' },
-                            height: { xs: 35, md: 37 },
-                            mt: 0.6,
-                            bgcolor: 'transparent'
-                        }}>
+                                    return (
+                                        <CustomeTextField data={data} formik={formik} />
+                                    )
+                                }
 
-                            <input type="text"
-                                name="email"
-                                // laceholder='EMAIL'
-                                className={Styles.field}
-                            />
+                                )
 
-                        </Box>
+                            }
 
-                    </Grid>
 
-                    <Grid container sx={{ mt: { xs: 1.5, lg: 2 } }}>
+                            <button type="submit">Submit</button>
 
-                        <Typography sx={{
-                            fontWeight: 'bold',
-                            width: '100%'
-                        }}>Full name</Typography>
+                        </Grid>
 
-                        <Box sx={{
-                            width: { xs: '100%', lg: '80%' },
-                            height: { xs: 35, md: 37 },
-                            mt: 0.6,
-                            bgcolor: 'transparent'
-                        }}>
 
-                            <input type="text"
-                                name="email"
-                                // laceholder='EMAIL'
-                                className={Styles.field}
-                            />
 
-                        </Box>
+                    </form>
 
-                    </Grid>
 
-                    <Typography sx={{
+
+
+
+
+
+
+
+                    {/* <Typography sx={{
                         fontSize: 11,
                         fontWeight: 'bold',
                         mt: 0.5,
                         bgcolor: 'transparent'
-                    }}>Passwords must be at least 6 characters.</Typography>
+                    }}>Passwords must be at least 6 characters.</Typography> */}
 
 
                     <Box sx={{
-                        width: { xs: '100%', lg: '80%' },
-                        mt: 2
+                        width: { xs: '100%', lg: '90%' },
+                        mt: 2,
                     }}>
 
                         <Button
-                            onClick={() => setCheck(!check)}    
+                            // onClick={() => setCheck(!check)}
                             width='100%' borderRadius='10px'>CONTINUE</Button>
 
                     </Box>

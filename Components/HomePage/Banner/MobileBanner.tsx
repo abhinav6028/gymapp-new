@@ -96,7 +96,7 @@ export default function MobileBanner() {
                         )
                     }
 
-                    <Button my={0.5}>Contact Us</Button>
+                    <Button my={0.5}>Subscribe</Button>
 
                 </Grid>
 

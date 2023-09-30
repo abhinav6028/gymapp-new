@@ -9,10 +9,13 @@ import { BG_COLOUR, PRIMARY_COLOUR } from '@/utils/colours'
 import { Grid, Box, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
 import React from 'react'
+import { loadStripe, Stripe } from '@stripe/stripe-js'
 
-export default function page() {
+
+export default async function page() {
 
     const router = useRouter()
+
 
     const items = [
         {
@@ -30,11 +33,15 @@ export default function page() {
 
     ]
 
+
+
     return (
         <Grid container>
             <Header />
 
             <MobileHeader />
+
+
 
             <Grid container sx={{ mt: 10 }}>
                 <Box
@@ -77,6 +84,9 @@ export default function page() {
                     py: { xs: '', sm: '', md: '', lg: 3 },
                     m2: 3
                 }}>
+
+                    <Box >SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</Box>
+
                     <Grid container md={8} lg={6} sx={{
                         bgcolor: 'transparent', alignItems: 'center',
                         py: 3
@@ -113,24 +123,6 @@ export default function page() {
                                 mr: { xs: 4, sm: 10, md: 0, lg: 0 }
                             }}
                         />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <Grid container sx={{
                             mt: 4,
@@ -217,10 +209,13 @@ export default function page() {
                                 borderRadius: 1,
                                 py: 1,
                                 alignItems: 'center',
-                                mt: { xs: 2, sm: '', md: '', lg: 1   }
+                                mt: { xs: 2, sm: '', md: '', lg: 1 }
                             }}>
 
                                 <Button width="100%" borderRadius={10}>SUBSCRIBE NOW</Button>
+
+
+
 
 
                             </Grid>
