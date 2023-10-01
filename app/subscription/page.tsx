@@ -85,7 +85,7 @@ export default async function page() {
                     m2: 3
                 }}>
 
-                    <Box >SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</Box>
+                    {/* <Box >SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</Box> */}
 
                     <Grid container md={8} lg={6} sx={{
                         bgcolor: 'transparent', alignItems: 'center',
@@ -157,7 +157,6 @@ export default async function page() {
                                             ml: 3
                                         }} >
                                             <H5 textAlign='start' fontWeight='bold' color="grey" >{data.content}</H5>
-                                        </Box>
 
                                     </Grid>
 
