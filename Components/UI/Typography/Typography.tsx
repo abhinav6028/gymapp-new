@@ -9,6 +9,7 @@ export const H1 = (props: any) => {
         <Typography sx={{
             fontSize: { xs: 60, sm: 100, md: 130, lg: 150 },
             width: 'fit-content', cursor: cursor,
+            fontFamily: 'Outfit',
             fontWeight: hover ? '' : fontWeight, color: color, bgcolor: '', height: 'fit-content', ml: ml
         }}> {props.children}</Typography >
     )
@@ -24,7 +25,7 @@ export const H2 = (props: any) => {
             fontSize: { xs: 50, sm: 90, md: 120 },
             width: 'fit-content', mr: mr, cursor: cursor, fontWeight: 'bold', ml: ml, mb: 5, height: 'fit-content',
             mt: { xs: mt - (-8), sm: mt - (-5), md: mt },
-            color: '#ffff',
+            color: '#ffff', fontFamily: 'Outfit'
             // fontFamily:'Outfit'
             // bgcolor:'green'
 
@@ -38,7 +39,7 @@ export const H2 = (props: any) => {
 
 export const H4 = (props: any) => {
 
-    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, textAlign } = props
+    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, textAlign,fontFamily } = props
 
     return (
         <Typography sx={{
@@ -46,7 +47,7 @@ export const H4 = (props: any) => {
             fontWeight: fontWeight, cursor: cursor,
             width: width ? width : '100%',
             textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
-            bgcolor:'transparent'
+            bgcolor: 'transparent', fontFamily: fontFamily
         }}>{props.children}</Typography>
     )
 }
@@ -66,7 +67,7 @@ export const H5 = (props: any) => {
             fontWeight: fontWeight, cursor: cursor,
             width: width ? width : '100%',
             textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
-            my: 0.5, color: color, bgcolor:'transparent'
+            my: 0.5, color: color, bgcolor: 'transparent', fontFamily: 'Oxygen'
         }}>{props.children}</Typography>
     )
 }

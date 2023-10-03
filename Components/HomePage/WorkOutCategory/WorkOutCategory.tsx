@@ -52,23 +52,23 @@ export default function WorkOutCategory() {
                     bgcolor: 'transparent', mt: 1
                 }} >
 
-                    <H4 fontWeight='bold'>Our Workout Categories</H4>
+                    <H4 fontWeight='800' fontFamily="Oxygen">Our Workout Categories</H4>
 
                     <Grid container sx={{
                         justifyContent: { xs: 'space-around', md: 'space-around', lg: 'center' },
-                        alignItems: 'center', my: 1,  bgcolor: 'transparent'
+                        alignItems: 'center', my: 1, bgcolor: 'transparent'
                     }}>
 
                         {items.map(data =>
 
-                            <Grid container xs={4.5} sm={5} md={4.5} lg={5} sx={{  bgcolor: 'transparent', my: 1.5 }}>
+                            <Grid container xs={4.5} sm={5} md={4.5} lg={5} sx={{ bgcolor: 'transparent', my: 1.5 }}>
 
                                 <Grid container lg={8} sx={{
                                     bgcolor: SECONDARY_COLOUR, justifyContent: 'space-evenly',
                                     alignItems: 'center', display: 'flex',
                                     borderRadius: 1.5,
                                     py: 0.5,
-                                    
+
                                 }}>
 
                                     <Box
@@ -101,6 +101,6 @@ export default function WorkOutCategory() {
             </Grid>
 
         </Grid >
-        
+
     )
 }

@@ -9,7 +9,7 @@ export default function OurStory() {
         <Grid container sx={{
             justifyContent: 'center', alignItems: 'center',
             bgcolor: { xs: SECONDARY_COLOUR, sm: '', md: '', lg: '' },
-            my: { xs: 4 }
+            my: {  }
 
         }}>
 
