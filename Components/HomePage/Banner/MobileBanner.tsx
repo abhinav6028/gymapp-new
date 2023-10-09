@@ -58,40 +58,53 @@ export default function MobileBanner() {
 
                 />
 
-                <Grid container xs={4} sx={{ bgcolor: '', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
+                <Grid container xs={4} sx={{ alignItems: 'center', justifyContent: 'space-around', flexDirection: 'column' }}>
 
                     {
                         items.map((data, index) =>
 
-                            <Box sx={{
+                            <Grid sx={{
+                                bgcolor: SECONDARY_COLOUR,
                                 width: { xs: 65, sm: 100 },
                                 height: { xs: 65, sm: 100 },
-                                position: 'relative', bgcolor: '#ECD268',
-                                my: { xs: 1, sm: 1 },
                                 borderRadius: 1
                             }}>
 
-                                <Grid container sx={{ height: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
 
-                                    <Box
-                                        component='img'
-                                        src='Assets/Icons/Treadmill.png'
-                                        sx={{
-                                            width: { xs: 25, sm: 35 },
-                                            height: { xs: 25, sm: 35 }
-                                        }}
-                                    />
+                                <Box bgcolor="red" sx={{
 
-                                    <Box sx={{
-                                        mt: { xs: 0, sm: 0.5 }
-                                    }}>
-                                        <H5 fontWeight='bold' >Diet</H5>
-                                    </Box>
+                                    position: 'relative',
+                                    my: { xs: 1, sm: 1 },
+                                    borderRadius: 1, bgcolor: 'transparent'
+                                }}>
+
+                                    <Grid container sx={{ height: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', bgcolor: 'transparent' }}>
+
+                                        <Box
+                                            component='img'
+                                            src='Assets/Icons/Treadmill.png'
+                                            sx={{
+                                                width: { xs: 25, sm: 35 },
+                                                height: { xs: 25, sm: 35 },
+                                                bgcolor: 'transparent'
+
+                                            }}
+                                        />
+
+                                        <Box sx={{
+                                            mt: { xs: 0, sm: 0.5 },
+                                            bgcolor: 'transparent'
+                                        }}>
+                                            <H5 fontWeight='bold' >Diet</H5>
+                                        </Box>
 
 
-                                </Grid>
+                                    </Grid>
 
-                            </Box>
+                                </Box>
+                            </Grid>
+
+
 
                         )
                     }

@@ -32,7 +32,7 @@ export default function RootLayout({
 
 
       <body className={inter.className}>
-        
+
         <QueryClientProvider client={queryClient}>
 
           {children}

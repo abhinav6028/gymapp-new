@@ -34,8 +34,8 @@ export default function Header() {
     return (
         <Grid container sx={{
             justifyContent: 'end', py: 1.5, alignItems: 'center',
-            // bgcolor: BG_COLOUR,
-            bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
+            bgcolor: BG_COLOUR,
+            // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
             zIndex: 1000, position: 'fixed',
             display: { xs: 'none', sm: 'none', md: 'flex' }
         }}>
@@ -47,7 +47,7 @@ export default function Header() {
                         onClick={() => router.push(data.path)}
                         sx={{ mr: { xs: 1.5, md: 2.8 } }}>
 
-                        <H5 cursor='pointer'>{data.name}</H5>
+                        <H5 cursor='pointer' fontFamily='Oxygen'>{data.name}</H5>
 
                     </Box>
 

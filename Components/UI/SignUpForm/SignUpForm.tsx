@@ -174,8 +174,17 @@ export default function SignUpForm(props: any) {
 
                             }
 
+                            <Box sx={{
+                                width: { xs: '100%', lg: '90%' },
+                                mt: 2,
+                            }}>
 
-                            <button type="submit">Submit</button>
+                                <Button
+                                    // onClick={() => setCheck(!check)}
+                                    width='100%' borderRadius='10px'>CONTINUE</Button>
+
+                            </Box>
+                            {/* <button type="submit">Submit</button> */}
 
                         </Grid>
 
@@ -186,29 +195,6 @@ export default function SignUpForm(props: any) {
 
 
 
-
-
-
-
-
-                    {/* <Typography sx={{
-                        fontSize: 11,
-                        fontWeight: 'bold',
-                        mt: 0.5,
-                        bgcolor: 'transparent'
-                    }}>Passwords must be at least 6 characters.</Typography> */}
-
-
-                    <Box sx={{
-                        width: { xs: '100%', lg: '90%' },
-                        mt: 2,
-                    }}>
-
-                        <Button
-                            // onClick={() => setCheck(!check)}
-                            width='100%' borderRadius='10px'>CONTINUE</Button>
-
-                    </Box>
 
                     <Box sx={{
                         width: { xs: '100%', lg: '80%' },

@@ -32,11 +32,6 @@ export default function VideoSection() {
 
     console.log("fetchedData", fetchedData);
 
-    console.log("hello");
-
-
-
-
     return (
         <Grid container sx={{
             justifyContent: 'center', alignItems: 'center',
@@ -91,7 +86,10 @@ export default function VideoSection() {
                             fetchedData?.map((data: any, index: any) =>
 
 
-                                <Grid container xs={12} sm={4} md={4} sx={{ bgcolor: 'transparent', justifyContent: 'center', alignItem: 'center' }}>
+                                <Grid container xs={12} sm={4} md={4} sx={{
+                                    bgcolor: 'transparent', justifyContent: 'center', alignItem: 'center',
+                                    my: { xs: 1.5 }
+                                }}>
 
 
                                     <Box sx={{
