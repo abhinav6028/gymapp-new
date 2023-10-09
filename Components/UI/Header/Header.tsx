@@ -34,8 +34,8 @@ export default function Header() {
     return (
         <Grid container sx={{
             justifyContent: 'end', py: 1.5, alignItems: 'center',
-            bgcolor: BG_COLOUR,
-            // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
+            // bgcolor: BG_COLOUR,
+            bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
             zIndex: 1000, position: 'fixed',
             display: { xs: 'none', sm: 'none', md: 'flex' }
         }}>

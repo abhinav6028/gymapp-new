@@ -1,8 +1,11 @@
+"use client"
 import React from 'react';
 import { Box, Grid } from '@mui/material'
 import { H5, H4 } from '@/Components/UI/Typography/Typography';
 import { PRIMARY_COLOUR } from '@/utils/colours';
 import Button from '@/Components/UI/Button/Button';
+import { useQueryFetch } from '@/hooks/useFetchData';
+
 
 export default function VideoSection() {
 
@@ -25,18 +28,27 @@ export default function VideoSection() {
 
     ]
 
+    const { fetchedData: fetchedData } = useQueryFetch('category')
+
+    console.log("fetchedData", fetchedData);
+
+    console.log("hello");
+
+
+
+
     return (
         <Grid container sx={{
             justifyContent: 'center', alignItems: 'center',
             my: { xs: 2, sm: 3, md: 4 },
-            bgcolor: 'transparent'
+            bgcolor: ''
         }}>
 
-            <H4 fontWeight='bold'>Build Your Body With Us</H4>
+            <H4 fontWeight='bold' fontFamily="Oxygen" >Build Your Body With Us</H4>
 
             <H5 >We have 42 days  workout program for every section</H5>
 
-            <Grid container justifyContent="center" bgcolor="" alignItems="center" sx={{ position: 'relative', bgcolor: 'transparent' }}>
+            <Grid container justifyContent="center" bgcolor='' alignItems="center" sx={{ position: 'relative', bgcolor: 'transparent' }}>
 
                 <Grid container
                     sx={{
@@ -49,18 +61,19 @@ export default function VideoSection() {
 
                         height: 90,
                         width: '100%',
-                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '30%',
-                        // transform: 'translateY(-50%)',
-                        transform: ' rotate(-5deg)',
+                        position: 'absolute', left: 0, right: 0, margin: 'auto',
+                        top: '40%',
+                        transform: ' rotate(-5.89deg)',
+
                     }} />
 
                     <Grid bgcolor={PRIMARY_COLOUR} sx={{
 
                         height: 5,
                         width: '100%',
-                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '55%',
+                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '66%',
                         // transform: 'translateY(-50%)',
-                        transform: ' rotate(-5deg)',
+                        transform: ' rotate(-5.89deg)',
                     }} />
 
                 </Grid>
@@ -68,78 +81,88 @@ export default function VideoSection() {
 
 
                 <Grid container justifyContent='space-around' lg={10} md={12} zIndex='2' sx={{
-                    mt: 2, bgcolor: 'transparent'
+                    mt: { xs: 1, sm: 2, md: 4, lg: 5 }, bgcolor: 'transparent',
+                    alignItems: 'center'
                 }} >
 
-                    {
-                        fitnesContents.map((data, index) =>
+                    <Grid container bgcolor='transparent'>
 
-                            <Grid container justifyContent='space-around'
+                        {
+                            fetchedData?.map((data: any, index: any) =>
 
-                                xs={12} sm={4} md={4} sx={{
-                                    py: { xs: 2, md: 4 },
-                                    bgcolor: 'transparent'
-                                    // bgcolor: { xs: 'red', sm: 'blue', md: 'green' }
-                                }}>
 
-                                <Box
-                                    sx={{
+                                <Grid container xs={12} sm={4} md={4} sx={{ bgcolor: 'transparent', justifyContent: 'center', alignItem: 'center' }}>
+
+
+                                    <Box sx={{
                                         width: { xs: 270, sm: 230, md: 270, lg: 300 },
                                         height: { xs: 340, sm: 320, md: 340, lg: 370 },
                                         borderRadius: 5,
-                                        backgroundSize: 'cover', opacity: 1.8,
-                                        backgroundImage: `url(${data.imgUrl})`,
+                                        backgroundImage: `url('Assets/Home/intermediet.png')`,
                                         cursor: 'pointer',
                                         '&:hover': {
                                             transform: 'scale(1.06)',
                                             transition: '0.5s'
                                         },
-                                    }}
-                                >
-
-                                    <Grid container sx={{
-                                        height: '100%',
-                                        backgroundImage: `url('Assets/Home/darkrectangle.png')`, borderRadius: 5,
-                                        justifyContent: 'center',
-                                        alignItems: 'flex-start', position: "relative"
                                     }}>
 
-                                        <H5 mt={1.5} mr={18} fontWeight='bold' width='100%' color="white" textAlign='start'  >{data.heading}</H5>
+                                        <Grid container sx={{
+                                            height: '100%',
+                                            backgroundImage: `url('Assets/Home/darkrectangle.png')`,
+                                            justifyContent: 'center',
+                                            bgcolor: 'transparent', borderRadius: 5,
 
-                                        <Box
-                                            component='img'
-                                            src='Assets/Icons/videoicon.png'
-                                            sx={{
-                                                width: 65, height: 65,
-                                                cursor: 'pointer', position: "absolute",
-                                                top: "50%",
-                                                left: " 50%",
-                                                transform: "translate(-50%, -50%)",
-                                                bgcolor:'transparent'
+                                        }}>
 
-                                            }}
-                                        />
 
-                                    </Grid>
+                                            <Box sx={{
+                                                bgcolor: 'transparent', height: 'fit-content',
+                                                width: '100%',
+                                                mt: 1,
+                                                ml: 2
+                                            }}>
 
-                                </Box>
+                                                <H5 fontWeight='bold' width='100%' color="white" textAlign='start' fontFamily="Outfit">{data.name} </H5>
 
-                            </Grid>
+                                            </Box>
 
-                        )
-                    }
+                                            <Box
+                                                component='img'
+                                                src={'/Assets/Icons/videoicon.png'}
+                                                sx={{
+                                                    width: 65, height: 65,
+                                                    cursor: 'pointer',
+                                                    bgcolor: 'transparent',
 
-                    <Box sx={{ my: 1 }}>
-                        <Button>Subscribe</Button>
-                    </Box>
+                                                }}
+                                            />
+
+
+                                        </Grid>
+
+                                    </Box>
+
+                                </Grid>
+
+                            )
+                        }
+
+                    </Grid>
+
+
 
                 </Grid>
 
             </Grid>
 
+            <Grid container sx={{ mt: 5, justifyContent: 'center', alignItems: 'center' }}>
+                <Button>Subscribe</Button>
+            </Grid>
 
-        </Grid>
+        </Grid >
 
-        // </Grid >
+
     )
 }
+
+

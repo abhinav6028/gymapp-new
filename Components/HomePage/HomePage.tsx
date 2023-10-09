@@ -11,6 +11,10 @@ import OurStory from './OurStory/OurStory';
 import MobileBanner from './Banner/MobileBanner';
 
 export default function HomePage() {
+
+
+console.log("hellooo")
+
     return (
         <Grid container>
 
