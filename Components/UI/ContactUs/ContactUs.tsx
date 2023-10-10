@@ -104,7 +104,6 @@ export default function ContactUs() {
                                 width: '90%',
                                 height: { xs: 35, sm: 60, lg: 50 },
                                 my: { xs: 1.3, sm: 2, md: 1 },
-                                bgcolor: 'red'
                             }}>
 
                                 <input type="text"
@@ -119,7 +118,6 @@ export default function ContactUs() {
                                 width: '90%',
                                 height: { xs: 35, sm: 60, lg: 50 },
                                 my: { xs: 1.3, sm: 2, md: 1 },
-                                bgcolor: 'red'
                             }}>
 
                                 <input type="text"
