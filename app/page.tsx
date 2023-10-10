@@ -8,7 +8,6 @@ import React from 'react'
 const page = () => {
 
   return (
-
     <Grid bgcolor={BG_COLOUR}>
 
       <Header />

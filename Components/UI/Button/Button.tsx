@@ -10,22 +10,20 @@ export default function Button(props: any) {
 
   return (
 
-    <Button variant="outlined">
+
+    <Box onClick={onClick} sx={{
+      bgcolor: bgcolor ? bgcolor : PRIMARY_COLOUR,
+      borderRadius: borderRadius ? borderRadius : '5px',
+      height: { xs: 35, sm: 40, md: 45 },
+      width: width ? width : { xs: 110, sm: 140, md: 162 },
+      display: 'flex', justifyContent: 'center', alignItems: 'center', ml: ml,
+      mr: { xs: mr - 3, lg: mr },
+      cursor: 'pointer', mt: mt, pt: pt, my: my, border: `2px solid ${PRIMARY_COLOUR}`
+    }}>
+
       <H5 fontWeight='bold'>{props.children}</H5>
-    </Button>
-    // <Box onClick={onClick} sx={{
-    //   bgcolor: bgcolor ? bgcolor : PRIMARY_COLOUR,
-    //   borderRadius: borderRadius ? borderRadius : '5px',
-    //   height: { xs: 35, sm: 40, md: 45 },
-    //   width: width ? width : { xs: 110, sm: 140, md: 162 },
-    //   display: 'flex', justifyContent: 'center', alignItems: 'center', ml: ml,
-    //   mr: { xs: mr - 3, lg: mr },
-    //   cursor: 'pointer', mt: mt, pt: pt, my: my, border: `2px solid ${PRIMARY_COLOUR}`
-    // }}>
 
-    //   <H5 fontWeight='bold'>{props.children}</H5>
-
-    // </Box>
+    </Box>
   )
 }
 
