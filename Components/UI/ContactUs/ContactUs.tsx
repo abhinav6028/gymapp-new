@@ -40,7 +40,7 @@ export default function ContactUs() {
                     src='Assets/Home/contact-us.png'
                     sx={{
                         width: "100%",
-                        height: '100%',
+                        height: '100%'
                     }}
                 />
 
@@ -178,11 +178,11 @@ export default function ContactUs() {
                                         }}
                                     />
 
-
                                 )
                             }
 
                         </Grid>
+
                     </Grid>
 
                 </Grid>
