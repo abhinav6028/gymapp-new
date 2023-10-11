@@ -56,8 +56,11 @@ export default function VideoSection() {
 
                         height: 90,
                         width: '100%',
-                        position: 'absolute', left: 0, right: 0, margin: 'auto',
-                        top: '40%',
+                        position: 'absolute',
+                        left: 0, right: 0,
+                        margin: 'auto',
+                        transformOrigin: '0 0',
+                        top: '60%',
                         transform: ' rotate(-5.89deg)',
 
                     }} />
@@ -66,8 +69,8 @@ export default function VideoSection() {
 
                         height: 5,
                         width: '100%',
-                        position: 'absolute', left: 0, right: 0, margin: 'auto', top: '66%',
-                        // transform: 'translateY(-50%)',
+                        position: 'absolute', left: 0, right: 0, margin: 'auto',
+                        top: '68%',
                         transform: ' rotate(-5.89deg)',
                     }} />
 
@@ -154,7 +157,7 @@ export default function VideoSection() {
             </Grid>
 
             <Grid container sx={{ mt: 5, justifyContent: 'center', alignItems: 'center' }}>
-                <Button>Subscribe</Button>
+                <Button letterSpacing={1.2} fontFamily="Oxygen">Subscribe</Button>
             </Grid>
 
         </Grid >

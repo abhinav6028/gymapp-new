@@ -25,7 +25,8 @@ export const H2 = (props: any) => {
             fontSize: { xs: 50, sm: 90, md: 120 },
             width: 'fit-content', mr: mr, cursor: cursor, fontWeight: 'bold', ml: ml, mb: 5, height: 'fit-content',
             mt: { xs: mt - (-8), sm: mt - (-5), md: mt },
-            color: '#ffff', fontFamily: 'Outfit'
+            color: '#ffff', fontFamily: 'Outfit',
+
             // fontFamily:'Outfit'
             // bgcolor:'green'
 
@@ -59,7 +60,7 @@ export const H4 = (props: any) => {
 
 export const H5 = (props: any) => {
 
-    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, color, textAlign, fontFamily } = props
+    const { m, mt, mb, ml, mr, mx, my, p, pt, pb, pl, pr, px, py, fontWeight, cursor, width, color, textAlign, fontFamily, letterSpacing } = props
 
     return (
         <Typography sx={{
@@ -68,7 +69,7 @@ export const H5 = (props: any) => {
             width: width ? width : '100%', mt: mt,
             textAlign: { xs: 'center', lg: textAlign ? textAlign : 'center' },
             my: 0.5, color: color, bgcolor: 'transparent', fontFamily: fontFamily,
-
+            letterSpacing: letterSpacing ? letterSpacing : ''
         }}>{props.children}</Typography>
     )
 }

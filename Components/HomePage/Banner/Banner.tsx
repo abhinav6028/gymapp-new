@@ -109,7 +109,7 @@ export default function Banner() {
                                         }}
                                     />
 
-                                    <H5 fontWeight='bold'>Diet</H5>
+                                    <H5 fontWeight='bold' letterSpacing={1} fontFamily="Oxygen" >Diet</H5>
 
                                 </Grid>
 
@@ -121,7 +121,8 @@ export default function Banner() {
                     <Button
 
                         onClick={() => router.push('/subscription')}
-                        mt='auto'>Subscribe</Button>
+                        letterSpacing={1.2} fontFamily="Oxygen"
+                        mt='auto' >Subscribe</Button>
 
                 </Grid>
 

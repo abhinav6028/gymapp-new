@@ -61,7 +61,7 @@ export default function ContactUs() {
                     </Grid>
 
 
-                    
+
 
                     <Grid container sx={{
                         my: { xs: 1, lg: 4 },
@@ -150,7 +150,9 @@ export default function ContactUs() {
 
                             <Box sx={{ width: '90%', my: 2 }}>
 
-                                <Button ml="auto" bgcolor='#FFFFFF'> SEND </Button>
+                                <Button ml="auto" bgcolor='#FFFFFF'
+                                    hoverColour="transparent" hoverBorderRadius='7'
+                                > SEND </Button>
 
                             </Box>
 
@@ -189,7 +191,7 @@ export default function ContactUs() {
 
             </Grid>
 
-        </Grid>
+        </Grid >
 
     )
 }

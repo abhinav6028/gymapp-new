@@ -90,7 +90,7 @@ export default function WorkOutCategory() {
 
                         <Box sx={{ mt: { md: 2 } }}>
 
-                            <Button>Subscribe</Button>
+                            <Button letterSpacing={1.2} fontFamily="Oxygen">Subscribe</Button>
 
                         </Box>
 

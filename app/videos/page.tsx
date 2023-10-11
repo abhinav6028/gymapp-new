@@ -37,9 +37,28 @@ export default function page() {
             <Grid xs={10} sm={10} lg={11} container sx={{
                 justifyContent: 'center', alignItems: 'center', bgcolor: '',
                 mt: 12,
+                height: 46
             }}>
 
-                <OutlinedInput
+
+                <Box sx={{
+                    width: '100%',
+                    height: '100%',
+                    bgcolor: '',
+                    mt: 1,
+                    
+                }}>
+                    <input type="text" className={Styles.serach_field}
+                        placeholder='Search'
+                    />
+                </Box>
+
+
+
+
+
+
+                {/* <OutlinedInput
                     id="outlined-adornment-weight"
                     aria-describedby="outlined-weight-helper-text"
                     startAdornment={<InputAdornment position="start">
@@ -67,7 +86,7 @@ export default function page() {
                         bgcolor: '#ECD268', border: '#ECD268',
 
                     }}
-                />
+                /> */}
 
             </Grid>
 
@@ -111,12 +130,12 @@ export default function page() {
                                 <Box sx={{
 
                                     width: '100%',
-                                    textAlign: 'center',
+                                    // textAlign: 'center',
                                     // bgcolor: 'red'
                                 }}>
 
                                     <Grid sx={{
-                                        justifyContent: 'center',
+                                        // justifyContent: 'center',
                                         mt: { xs: -2, lg: -13 },
                                         mx: { xs: 2.5, sm: 2, md: 2.5, lg: '' }
                                     }}>

@@ -37,9 +37,9 @@ export default async function page() {
 
     return (
         <Grid container>
-            <Header />
+            {/* <Header />
 
-            <MobileHeader />
+            <MobileHeader /> */}
 
 
 
@@ -84,8 +84,6 @@ export default async function page() {
                     py: { xs: '', sm: '', md: '', lg: 3 },
                     m2: 3
                 }}>
-
-                    <Box >SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</Box>
 
                     <Grid container md={8} lg={6} sx={{
                         bgcolor: 'transparent', alignItems: 'center',
@@ -212,11 +210,10 @@ export default async function page() {
                                 mt: { xs: 2, sm: '', md: '', lg: 1 }
                             }}>
 
-                                <Button width="100%" borderRadius={10}>SUBSCRIBE NOW</Button>
-
-
-
-
+                                <Button
+                                    width="100%" borderRadius={10}
+                                    onClick={() => alert('/////////////////////')}
+                                >SUBSCRIBE NOW</Button>
 
                             </Grid>
 

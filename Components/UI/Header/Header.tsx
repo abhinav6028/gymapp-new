@@ -47,7 +47,7 @@ export default function Header() {
                         onClick={() => router.push(data.path)}
                         sx={{ mr: { xs: 1.5, md: 2.8 } }}>
 
-                        <H5 cursor='pointer' fontFamily='Oxygen'>{data.name}</H5>
+                        <H5 cursor='pointer' fontFamily='Oxygen' letterSpacing={1.2}>{data.name}</H5>
 
                     </Box>
 
@@ -58,6 +58,6 @@ export default function Header() {
 
             <Button mr={5}>Log In</Button>
 
-        </Grid>
+        </Grid >
     )
 }
