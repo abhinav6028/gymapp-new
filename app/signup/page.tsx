@@ -19,7 +19,7 @@ export default function page() {
 
     const [check, setCheck] = React.useState(true);
 
-    
+
 
 
 
@@ -27,15 +27,15 @@ export default function page() {
 
         <Grid container sx={{
             bgcolor: BG_COLOUR,
-
+            // mt: -5
         }}>
 
 
-            <Header />
+            {/* <Header />
 
-            <MobileHeader />
+            <MobileHeader /> */}
 
-            
+
 
             {/* <Grid container bgcolor='' sx={{ height: 'fit-content', bgcolor: '' }}>
                 <Box
@@ -53,14 +53,14 @@ export default function page() {
 
 
             <Grid container sx={{
-                mt: { xs: 8, lg: 8 },
+                // mt: { xs: 8, lg: 8 },
                 bgcolor: BG_COLOUR
             }}>
 
                 {
                     check ? <SignUpForm check={check} setCheck={setCheck} /> : <Authentication />
                 }
-                
+
 
                 <SignUpImage />
 

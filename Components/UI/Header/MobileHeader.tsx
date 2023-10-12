@@ -55,8 +55,8 @@ export default function MobileHeader() {
         position: "fixed",
         zIndex: "110", top: "0", left: "0",
         // bgcolor: "#FEF0E5"
-        bgcolor: BG_COLOUR
-        // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
+        // bgcolor: BG_COLOUR
+        bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
       }} >
 
         <Box position="fixed" left="0" sx={{

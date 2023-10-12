@@ -65,13 +65,9 @@ export default function Banner() {
                     bottom: { md: "40%", lg: 250 }, bgcolor: 'transparent'
                 }}>
 
-
                     <Dumbel />
 
-
                 </Box>
-
-
 
                 <Grid container sx={{
                     ml: { md: 6, lg: 20 },

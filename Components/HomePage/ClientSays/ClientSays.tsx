@@ -19,18 +19,19 @@ export default function ClientSays() {
 
                             <Grid container sx={{ bgcolor: SECONDARY_COLOUR, justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Grid container xs={10} lg={11} sx={{ bgcolor: SECONDARY_COLOUR }}>
+                                <Grid container xs={10} md={11} lg={11} sx={{ bgcolor: SECONDARY_COLOUR, justifyContent: 'center' }}>
 
                                     <Grid container sx={{
                                         // mt: { xs: 1, lg: 2 },
-                                        bgcolor: 'transparent'
+                                        bgcolor: 'transparent', justifyContent: 'center'
 
                                     }}>
 
 
                                         <Grid container bgcolor='' lg={2} sx={{
                                             justifyContent: 'center', alignItems: 'center',
-                                            bgcolor: 'transparent'
+                                            bgcolor: 'transparent',
+                                            mt: 2
                                         }} >
                                             <Avatar alt="Remy Sharp"
                                                 sx={{
@@ -45,7 +46,7 @@ export default function ClientSays() {
 
                                         <Grid container bgcolor='' lg={7} sx={{
                                             alignItems: 'center',
-                                            bgcolor: 'transparent'
+                                            bgcolor: 'transparent', justifyContent: 'center'
                                         }}>
 
                                             <Box sx={{
@@ -61,7 +62,8 @@ export default function ClientSays() {
                                                         height: { xs: 15, lg: 18 },
                                                         width: { xs: 15, lg: 18 },
                                                         m: 1,
-                                                        bgcolor: 'transparent'
+                                                        bgcolor: 'transparent', textAlign: 'center',
+                                                        display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' }
                                                         // ml: 10,
                                                         // zIndex: 2000
                                                     }}
@@ -69,12 +71,13 @@ export default function ClientSays() {
 
                                                 <Box sx={{
                                                     ml: 3,
-                                                    bgcolor: 'transparent'
+                                                    bgcolor: 'transparent',
+                                                    mt: { xs: 1.5, sm: 2, md: 2, lg: '' }
                                                 }}>
                                                     <H4 fontWeight='bold' textAlign='start' >
 
                                                         <Typography sx={{
-                                                            fontSize: 23,
+                                                            fontSize: { xs: 19, lg: 23 },
                                                             bgcolor: 'transparent', fontWeight: 'bold',
                                                             fontFamily: 'Oxygen'
                                                         }}>Our Client Says</Typography>
@@ -84,7 +87,7 @@ export default function ClientSays() {
                                                     <Typography sx={{
                                                         py: 2,
                                                         fontWeight: 'bold',
-                                                        textAlign: { xs: 'start' },
+                                                        textAlign: { xs: 'center', sm: 'center', md: 'start', lg: 'start' },
                                                         bgcolor: 'transparent', fontFamily: 'Oxygen'
                                                     }}>Lorem Ipsum is simply dummy text of the printing and typesetting
                                                         industry. Lorem Ipsum has been the industry s standard dummy text
@@ -121,7 +124,7 @@ export default function ClientSays() {
                                                 sx={{
                                                     height: { xs: 100, lg: 180 },
                                                     width: { xs: 100, lg: 180 },
-                                                    m: 3
+                                                    m: { xs: 1.5, sm: 2, md: 3, lg: 3 }
                                                 }}
                                             />
 

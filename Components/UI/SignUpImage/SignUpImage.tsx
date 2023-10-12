@@ -9,7 +9,7 @@ export default function SignUpImage() {
             sx={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '88vh',
+                height: '100vh',
                 ml: 'auto',
                 display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' }
             }}

@@ -36,7 +36,7 @@ export default function WorkOutCategory() {
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
                 border: `3px solid ${PRIMARY_COLOUR}`,
-                py: { xs: 2, sm: 2, lg: 4 }
+                py: { xs: 1, sm: 2, lg: 4 }
             }}>
 
 
