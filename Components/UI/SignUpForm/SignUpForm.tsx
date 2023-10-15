@@ -197,12 +197,12 @@ export default function SignUpForm(props: any) {
                                     switch (data.inputType) {
                                         case 'text':
                                             return (
-                                                <CustomeTextField data={data} formik={formik} />
+                                                <CustomeTextField data={data} formik={formik} fieldWidth='80%' />
                                             )
                                             break;
                                         case 'dropDown':
                                             return (
-                                                <CustomeDropDown gender={gender} setGender={setGender} />
+                                                <CustomeDropDown gender={gender} setGender={setGender} fieldWidth='80%' />
                                             )
                                             break;
                                     }

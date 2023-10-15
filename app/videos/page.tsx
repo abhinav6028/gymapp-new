@@ -8,7 +8,8 @@ import { BG_COLOUR } from '@/utils/colours'
 import { H4, H5 } from '@/Components/UI/Typography/Typography'
 import Button from '@/Components/UI/Button/Button'
 import ImageComponent from '@/Components/UI/ImageComponent/ImageComponent'
-import MobileHeader from '@/Components/UI/Header/MobileHeader'
+import MobileHeader from '@/Components/UI/Header/MobileHeader';
+// import { Styles } from '../../Styles/scrolling.module.css'
 
 export default function page() {
 
@@ -46,57 +47,21 @@ export default function page() {
                     height: '100%',
                     bgcolor: '',
                     mt: 1,
-                    
+
                 }}>
                     <input type="text" className={Styles.serach_field}
                         placeholder='Search'
                     />
                 </Box>
 
-
-
-
-
-
-                {/* <OutlinedInput
-                    id="outlined-adornment-weight"
-                    aria-describedby="outlined-weight-helper-text"
-                    startAdornment={<InputAdornment position="start">
-
-                        <Box
-                            component='img'
-                            src='/Assets/Icons/Search.png'
-                            sx={{
-                                width: { sm: 25, lg: 35 },
-                                height: { sm: 25, lg: 35 },
-                                ml: { sm: 1, lg: 2 }
-                            }}
-                        />
-
-                        <Box sx={{ ml: { sm: 1.5, lg: 2 } }}>
-                            <H5 ml={2} color='black' fontWeight='550'>Search</H5>
-                        </Box>
-
-
-                    </InputAdornment>}
-                    sx={{
-                        width: '100%',
-                        height: { xs: 40, lg: 55 },
-                        borderRadius: 3,
-                        bgcolor: '#ECD268', border: '#ECD268',
-
-                    }}
-                /> */}
-
             </Grid>
 
-            <Grid container lg={10} bgcolor="" sx={{ my: 4, justifyContent: 'space-around' }}>
+            <Grid container xs={11} lg={11} bgcolor="" sx={{ my: 4, justifyContent: 'space-around' }}>
 
                 {
                     buttons.map((data: any, index: any) =>
 
                         <Button key={index}>{data.btnName}</Button>
-
                     )
                 }
 

@@ -43,7 +43,7 @@ export default async function page() {
 
 
 
-            <Grid container sx={{ mt: 10 }}>
+            <Grid container sx={{ mt: 2 }}>
                 <Box
                     component='img'
                     src='Assets/Icons/Multiply.png'

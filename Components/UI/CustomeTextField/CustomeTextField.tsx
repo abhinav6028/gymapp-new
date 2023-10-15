@@ -4,27 +4,33 @@ import Styles from '../../../Styles/inputfield.module.css'
 
 export default function CustomeTextField(props: any) {
 
-    const { data, formik } = props
+    const { data, formik, lg, one, xs, justifyContent, fieldHeight, fieldWidth } = props
 
 
     return (
-        <Grid container md={6} lg={6} sx={{
-            mt: {
-                xs: 1.5, lg: 2,
-                bgcolor: '',
-                mx: 3
-            }
-        }}>
+        <Grid container
+            xs={xs && xs}
+            md={7} lg={lg ? lg : 6} sx={{
+                mt: {
+                    xs: 1.5, lg: 2,
+                    bgcolor: '',
+                    mx: 3,
+                    justifyContent: justifyContent
+                }
+            }}>
 
             <Typography sx={{
                 fontWeight: 'bold',
-                width: '80%',
-                bgcolor: ''
+                width: '100%',
+                bgcolor: '',
             }}>{data.fieldName}</Typography>
 
             <Box sx={{
-                width: { xs: '100%', lg: '80%' },
-                height: { xs: 35, md: 37 }, mt: 0.6,
+                width: { xs: '100%', lg: fieldWidth ? fieldWidth : '100%' },
+                height: {
+                    xs: 35, md: fieldHeight ? fieldHeight : 38,
+                },
+                mt: 0.6,
                 bgcolor: ''
             }}>
 

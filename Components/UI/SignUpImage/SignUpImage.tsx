@@ -10,8 +10,10 @@ export default function SignUpImage() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: '100vh',
-                ml: 'auto',
-                display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' }
+                // ml: 'auto',
+                display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' },
+                position: 'absolute',
+                right: 0
             }}
 
         />

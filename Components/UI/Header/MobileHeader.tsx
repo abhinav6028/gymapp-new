@@ -54,9 +54,8 @@ export default function MobileHeader() {
         py: 1,
         position: "fixed",
         zIndex: "110", top: "0", left: "0",
-        // bgcolor: "#FEF0E5"
-        // bgcolor: BG_COLOUR
-        bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
+        bgcolor: BG_COLOUR
+        // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
       }} >
 
         <Box position="fixed" left="0" sx={{
@@ -114,7 +113,7 @@ export default function MobileHeader() {
 
         <Button onClick={() => router.push('/signup')} ml={1.5} >Sign Up</Button>
 
-        <Button mt={1.5} ml={1.5}>Log In</Button>
+        <Button onClick={() => router.push('/login')} mt={1.5} ml={1.5}>Log In</Button>
       </Box>
 
     </Grid >
