@@ -6,6 +6,7 @@ import Button from '../Button/Button';
 import { H5 } from '../Typography/Typography';
 import { BG_COLOUR } from '@/utils/colours';
 import { useRouter } from 'next/navigation';
+import { Styles } from '../../../Styles/headerr.module.css'
 
 
 export default function Header() {
@@ -34,7 +35,7 @@ export default function Header() {
     return (
         <Grid container sx={{
             justifyContent: 'end', py: 1.5, alignItems: 'center',
-            bgcolor: BG_COLOUR,
+            // bgcolor: 'red',
             // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink' },
             zIndex: 100, position: 'fixed',
             display: { xs: 'none', sm: 'none', md: 'flex' }

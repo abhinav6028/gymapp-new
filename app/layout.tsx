@@ -3,6 +3,7 @@ import Header from '@/Components/UI/Header/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { useRouter } from 'next/navigation'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,6 +17,8 @@ export default function RootLayout({
 
 
   const queryClient = new QueryClient()
+
+  const router = useRouter()
 
   return (
 
