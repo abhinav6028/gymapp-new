@@ -21,7 +21,7 @@ export default function page() {
             btnName: 'Beginner'
         },
         {
-            btnName: 'intermediate'
+            btnName: 'Intermediate'
         },
         {
             btnName: 'Expert'
